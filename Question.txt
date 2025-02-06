@@ -1,0 +1,58 @@
+# Code Challenge - Full Stack Take Home
+
+## Instructions
+
+Create a Python backend API with a GraphQL endpoint that exposes a product API.
+
+A sqlite database file is provided in this folder with the following schema:
+
+type Product {
+    id: Int!
+    title: String!
+    price: Float!
+    description: String!
+    category: String!
+    image: String!
+    rating: {
+        rate: Float!
+        count: Int!
+    }
+}
+
+1. Backend API
+    1. Use any Python backend technology you are comfortable with (Flask, FastAPI, etc)
+    2. Use any ORM you're comfortable with, we suggest SQLAlchemy
+        1. Create a simple ORM model for the product schema
+        2. DB operations should be asynchronous (see aiosqlite)
+    3. Endpoints should be GraphQL
+    4. Queries
+        1. Retrieve products with pagination, searchable
+        2. Retrieve a specific product by id
+    5. Mutations
+        1. Create a product
+        2. Update a product by id
+    6. Type checking
+        1. Use type checking where possible
+2. Testing
+    1. Pytest or similar
+    2. Use your judgement on where and how to test
+3. Documentation
+    1. Clear instructions for setting up locally
+4. Time Limit
+    1. Please limit this challange to 5 hours.
+    2. We totally understand this may not be possible to complete within the time allotted. Focus on making the best decisions you can about priorities.
+
+## Criteria for Evaluation
+
+- Code quality
+  - Readable, maintainable, accurate
+- Functionality
+  - Completeness
+  - Bugginess
+- Architecture
+  - Uses a structure that meets with modern development best practices
+- Testing
+  - Basic tests to ensure reliability
+- Documentation
+  - Clear and comprehensive
+  - Completely fine to copy and paste from existing documentation for a given framework

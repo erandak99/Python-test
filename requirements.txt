@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+strawberry-graphql[fastapi]
+sqlalchemy
+aiosqlite
+pytest
+pytest-asyncio
+greenlet
